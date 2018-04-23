@@ -1,0 +1,101 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/models/card.dae" type="PackedScene" id=1]
+[ext_resource path="res://scenes/base_scenes/card_base.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "discard"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 0.25, -4, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, -0.1 ), Vector3( 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 0.25, 0.25 ),
+"update": 0,
+"values": [ Vector3( 1, 1, 1 ), Vector3( 1.2, 1.1, 1 ), Vector3( 0, 0, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+
+[sub_resource type="Animation" id=2]
+
+length = 1.0
+loop = false
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 0.25, 0.25, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, -1 ), Vector3( 0, 0, -1 ), Vector3( 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 0.25, 0.25, 1 ),
+"update": 0,
+"values": [ Vector3( 1, 0, 0 ), Vector3( 1, 0, 0 ), Vector3( 1, 1, 1 ) ]
+}
+
+[node name="card_base" instance=ExtResource( 1 )]
+
+transform = Transform( 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+card_type = 0
+level = 1
+
+[node name="card-nocol" parent="." index="0"]
+
+transform = Transform( -0.5, 1.62921e-07, 0, 1.62921e-07, 0.5, 1.62921e-07, 5.30863e-14, 1.62921e-07, -0.5, 0, 0, 0 )
+layers = 8
+cast_shadow = 0
+_sections_unfolded = [ "Geometry", "Transform", "material" ]
+
+[node name="AnimationPlayer" parent="." index="1"]
+
+anims/discard = SubResource( 1 )
+anims/draw = SubResource( 2 )
+
+

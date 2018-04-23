@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/card_holder.gd" type="Script" id=1]
+
+[node name="card_holder" type="Spatial"]
+
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+selected = 1
+
+[node name="rotater" type="Spatial" parent="." index="0"]
+
+[node name="0" type="Spatial" parent="rotater" index="0"]
+
+transform = Transform( 0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 1.28549, 0, 4.81406 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="1" type="Spatial" parent="rotater" index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="2" type="Spatial" parent="rotater" index="2"]
+
+transform = Transform( 0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -1.28549, 0, 4.81406 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tween" type="Tween" parent="." index="1"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="light" type="SpotLight" parent="." index="2"]
+
+transform = Transform( -1, 0, 3.25841e-07, 5.45963e-08, 0.985863, 0.167555, -3.21235e-07, 0.167555, -0.985863, 0, 0.249117, 3.51316 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 2.5
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -24
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+spot_range = 2.5
+spot_attenuation = 1.0
+spot_angle = 25.0
+spot_angle_attenuation = 1.0
+_sections_unfolded = [ "Light", "Spot", "Transform" ]
+
+

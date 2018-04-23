@@ -1,0 +1,42 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scenes/cards/card_factory.gd" type="Script" id=1]
+[ext_resource path="res://scenes/cards/earth_quake_1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/cards/earth_quake_2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/cards/fire_strike_1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/cards/fire_strike_2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/cards/fire_strike_3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/cards/healing_1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/cards/healing_2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/cards/healing_3.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/cards/shield.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/cards/straight_shot_1.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/cards/straight_shot_2.tscn" type="PackedScene" id=12]
+
+[node name="card_factory" type="Node" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="card_base" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="card_base2" parent="." index="1" instance=ExtResource( 3 )]
+
+[node name="card_base3" parent="." index="2" instance=ExtResource( 4 )]
+
+[node name="card_base4" parent="." index="3" instance=ExtResource( 5 )]
+
+[node name="card_base5" parent="." index="4" instance=ExtResource( 6 )]
+
+[node name="card_base6" parent="." index="5" instance=ExtResource( 7 )]
+
+[node name="card_base7" parent="." index="6" instance=ExtResource( 8 )]
+
+[node name="card_base8" parent="." index="7" instance=ExtResource( 9 )]
+
+[node name="card_base9" parent="." index="8" instance=ExtResource( 10 )]
+
+[node name="card_base10" parent="." index="9" instance=ExtResource( 11 )]
+
+[node name="card_base11" parent="." index="10" instance=ExtResource( 12 )]
+
+

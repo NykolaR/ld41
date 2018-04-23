@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/fire_noise.wav-302dbbd48d22de9186556ce5ea1bdd51.sample"
+
+[deps]
+
+source_file="res://assets/audio/fire_noise.wav"
+source_md5="6a7c515980c0baeff1754dea6c9912f4"
+
+dest_files=[ "res://.import/fire_noise.wav-302dbbd48d22de9186556ce5ea1bdd51.sample" ]
+dest_md5="a8d040fdebea19610a1806fa219028d2"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

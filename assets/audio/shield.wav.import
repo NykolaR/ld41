@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shield.wav-28ce60ec10352f989ad5bbdcaa2a9611.sample"
+
+[deps]
+
+source_file="res://assets/audio/shield.wav"
+source_md5="263e24aeb6492ea4df4b564659c2f7b7"
+
+dest_files=[ "res://.import/shield.wav-28ce60ec10352f989ad5bbdcaa2a9611.sample" ]
+dest_md5="e55fd6b94c9cf57287913c9e54309925"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

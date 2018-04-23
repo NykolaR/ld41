@@ -1,0 +1,65 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=3
+
+[application]
+
+config/name="MRTACTBCB"
+run/main_scene="res://game_launch.tscn"
+boot_splash/image="res://assets/textures/tra.png"
+config/icon="res://assets/textures/icon.png"
+
+[autoload]
+
+arena_globals="*res://scenes/autoload/arena_globals.gd"
+globals="*res://scenes/autoload/globals.gd"
+card_factory="*res://scenes/cards/card_factory.tscn"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[input]
+
+0_left_bumper=[ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":4,"pressure":0.0,"pressed":false,"script":null)
+ ]
+1_left_bumper=[ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":1,"button_index":4,"pressure":0.0,"pressed":false,"script":null)
+ ]
+0_right_bumper=[ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":5,"pressure":0.0,"pressed":false,"script":null)
+ ]
+1_right_bumper=[ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":1,"button_index":5,"pressure":0.0,"pressed":false,"script":null)
+ ]
+0_shoot=[ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":7,"pressure":0.0,"pressed":false,"script":null)
+ ]
+1_shoot=[ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":1,"button_index":7,"pressure":0.0,"pressed":false,"script":null)
+ ]
+
+[layer_names]
+
+3d_render/layer_1="default"
+3d_physics/layer_1="default"
+3d_render/layer_2="environment"
+3d_physics/layer_2="environment"
+3d_render/layer_3="player"
+3d_physics/layer_3="player"
+3d_render/layer_4="card"
+3d_physics/layer_4="card"
+3d_render/layer_5="attack"
+3d_physics/layer_5="attack"
+3d_render/layer_6="shield"
+3d_physics/layer_6="shield"
+
+[rendering]
+
+environment/default_clear_color=Color( 0, 0, 0, 1 )
+environment/default_environment="res://default_env.tres"
+quality/dynamic_fonts/use_oversampling=true

@@ -1,0 +1,3 @@
+extends Node
+
+enum TYPES {HEALING, SHIELD, FIRE, EARTH, SHOT}
